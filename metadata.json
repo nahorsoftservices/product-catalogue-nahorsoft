@@ -1,0 +1,6 @@
+{
+  "name": "Mahabir Quantum India",
+  "description": "Wholesale electronics catalog and ordering platform via WhatsApp for Mahabir Quantum India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

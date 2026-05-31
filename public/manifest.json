@@ -1,0 +1,18 @@
+{
+  "short_name": "Mahabir Quantum",
+  "name": "Mahabir Quantum India",
+  "description": "Wholesale electronics catalog and ordering platform via WhatsApp for Mahabir Quantum India.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0057D9",
+  "orientation": "any"
+}
