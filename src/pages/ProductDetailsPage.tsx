@@ -21,7 +21,7 @@ export const ProductDetailsPage: React.FC = () => {
         <p className="text-gray-500 text-sm mb-6 font-sans">The product model might have been removed or updated in the catalog.</p>
         <button
           onClick={() => navigate('/')}
-          className="bg-[#0057D9] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#004dc2]"
+          className="bg-[#4F46E5] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#3B32CC]"
         >
           Return to Catalog
         </button>
@@ -38,7 +38,7 @@ export const ProductDetailsPage: React.FC = () => {
       {/* Back Button */}
       <button
         onClick={() => navigate(-1)}
-        className="inline-flex items-center space-x-1.5 text-gray-500 hover:text-[#0057D9] mb-6 text-sm font-medium transition-colors font-sans focus:outline-none"
+        className="inline-flex items-center space-x-1.5 text-gray-500 hover:text-[#4F46E5] mb-6 text-sm font-medium transition-colors font-sans focus:outline-none"
       >
         <ChevronLeft className="w-4 h-4" />
         <span>Back</span>
@@ -69,8 +69,8 @@ export const ProductDetailsPage: React.FC = () => {
         <div className="md:col-span-7 flex flex-col justify-between">
           <div>
             {/* Header info */}
-            <span className="inline-block bg-[#0057D9]/10 text-[#0057D9] text-[11px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-md mb-3 font-sans">
-              WHOLESALE STOCK
+            <span className="inline-block bg-[#4F46E5]/10 text-[#4F46E5] text-[11px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-md mb-3 font-sans">
+              SOFTWARE SPECIFICATION
             </span>
             <h1 className="text-xl sm:text-2xl font-bold text-[#0F172A] tracking-tight leading-tight mb-4 font-sans">
               {product.name}
@@ -79,14 +79,14 @@ export const ProductDetailsPage: React.FC = () => {
             {/* Price & MOQ Block */}
             <div className="grid grid-cols-2 gap-4 bg-[#FAFAFA] border border-[#E5E7EB] rounded-xl p-4 mb-6">
               <div>
-                <span className="text-[11px] uppercase tracking-wider text-gray-400 font-sans block mb-0.5">Wholesale Rate</span>
+                <span className="text-[11px] uppercase tracking-wider text-gray-400 font-sans block mb-0.5">Software Rate</span>
                 <span className="text-xl sm:text-2xl font-extrabold text-[#0F172A]">{product.rateDisplay}</span>
-                <span className="text-[10px] text-gray-400 block font-sans">Bulk Rate/Pc</span>
+                <span className="text-[10px] text-gray-400 block font-sans">Per License Rate</span>
               </div>
               <div className="border-l border-gray-200 pl-4">
-                <span className="text-[11px] uppercase tracking-wider text-gray-400 font-sans block mb-0.5">Minimum Order</span>
-                <span className="text-xl sm:text-2xl font-extrabold text-[#F59E0B]">{product.minimumOrderValueDisplay}</span>
-                <span className="text-[10px] text-gray-400 block font-sans">Required MOQ</span>
+                <span className="text-[11px] uppercase tracking-wider text-gray-400 font-sans block mb-0.5">Min Order Value</span>
+                <span className="text-xl sm:text-2xl font-extrabold text-[#4F46E5]">{product.minimumOrderValueDisplay}</span>
+                <span className="text-[10px] text-gray-400 block font-sans">Target MOQ</span>
               </div>
             </div>
 
@@ -143,7 +143,7 @@ export const ProductDetailsPage: React.FC = () => {
               ) : (
                 <button
                   onClick={() => addToCart(product, 1)}
-                  className="flex-1 flex items-center justify-center space-x-2 bg-[#0057D9] text-white hover:bg-[#004dc2] h-12 rounded-xl text-sm font-bold transition-all shadow-sm focus:outline-none"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-[#4F46E5] text-white hover:bg-[#3B32CC] h-12 rounded-xl text-sm font-bold transition-all shadow-sm focus:outline-none"
                 >
                   <ShoppingCart className="w-4 h-4" />
                   <span>Add To Cart</span>
@@ -164,7 +164,7 @@ export const ProductDetailsPage: React.FC = () => {
             {cartQty > 0 && (
               <p className="text-xs text-center text-[#16A34A] font-medium mt-3 flex items-center justify-center space-x-1">
                 <Check className="w-3.5 h-3.5 stroke-[2]" />
-                <span>You added {cartQty} carton/pieces of this model to your basket.</span>
+                <span>You added {cartQty} units of this software solution to your cart.</span>
               </p>
             )}
           </div>

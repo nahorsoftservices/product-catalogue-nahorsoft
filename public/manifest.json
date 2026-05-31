@@ -1,18 +1,18 @@
 {
-  "short_name": "Mahabir Quantum",
-  "name": "Mahabir Quantum India",
-  "description": "Wholesale electronics catalog and ordering platform via WhatsApp for Mahabir Quantum India.",
+  "short_name": "Nahorsoft",
+  "name": "Nahorsoft Software Services",
+  "description": "Customized apps and software catalog for retailers and wholesalers.",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "https://i.ibb.co/qF2R7QtD/Logo-New.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#0057D9",
+  "background_color": "#F8FAFC",
+  "theme_color": "#4F46E5",
   "orientation": "any"
 }

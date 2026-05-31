@@ -69,7 +69,7 @@ export const CustomerDetailsPage: React.FC = () => {
     }).join('\n\n');
 
     // Build the exact spec message pattern
-    const message = `MAHABIR QUANTUM INDIA ORDER
+    const message = `NAHORSOFT SOFTWARE SERVICES ORDER
 
 Customer Name:
 ${formData.name}
@@ -83,14 +83,14 @@ ${formData.shopName}
 Address:
 ${formData.address}
 
-PRODUCTS:
+PRODUCTS & SERVICES:
 
 ${productsString}
 
-Total Products:
+Total Items:
 ${totalItemsCount}
 
-Please confirm availability.`;
+Please confirm customization & licensing setup.`;
 
     // Target API whatsapp configurations
     const targetNumber = '9954212886';
@@ -112,7 +112,7 @@ Please confirm availability.`;
       <button
         onClick={() => navigate('/cart')}
         disabled={redirecting}
-        className="inline-flex items-center space-x-1.5 text-gray-500 hover:text-[#0057D9] mb-6 text-sm font-medium transition-colors font-sans disabled:opacity-50"
+        className="inline-flex items-center space-x-1.5 text-gray-500 hover:text-[#4F46E5] mb-6 text-sm font-medium transition-colors font-sans disabled:opacity-50"
       >
         <ChevronLeft className="w-4 h-4" />
         <span>Back to Basket</span>
@@ -123,7 +123,7 @@ Please confirm availability.`;
           Confirm Business Information
         </h2>
         <p className="text-xs text-gray-400 mb-6 font-sans">
-          Provide your firm description below to automatically compile and submit the invoice request over WhatsApp.
+          Provide your details below to automatically compile and submit the software requirement proposal over WhatsApp.
         </p>
 
         {/* Dynamic redirection loader */}
@@ -135,10 +135,10 @@ Please confirm availability.`;
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 bg-[#0F172A]/85 backdrop-blur-xs flex flex-col items-center justify-center p-6 text-center text-white"
             >
-              <Loader2 className="w-16 h-16 text-green-500 animate-spin mb-4" />
-              <h3 className="text-xl font-bold font-sans">Compiling Wholesale Invoice...</h3>
+              <Loader2 className="w-16 h-16 text-[#4F46E5] animate-spin mb-4" />
+              <h3 className="text-xl font-bold font-sans">Compiling Software Proposal...</h3>
               <p className="text-gray-300 text-xs max-w-xs mt-2 leading-relaxed">
-                We are generating the shopping roster. Redirecting you to WhatsApp line <strong>9954212886</strong> to confirm stock availability.
+                We are generating the requirements setup. Redirecting you to WhatsApp line <strong>9954212886</strong> to confirm customization.
               </p>
             </motion.div>
           )}
@@ -158,7 +158,7 @@ Please confirm availability.`;
               onChange={handleInputChange}
               placeholder="e.g. Rajat Sharma"
               className={`w-full px-4 py-3 bg-gray-50 border rounded-xl text-sm font-sans placeholder-gray-400 focus:outline-none focus:ring-2 focus:bg-white transition-all ${
-                errors.name ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#0057D9]'
+                errors.name ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#4F46E5]'
               }`}
             />
             {errors.name && <p className="text-red-500 text-xs mt-1.5 font-sans font-medium">{errors.name}</p>}
@@ -177,7 +177,7 @@ Please confirm availability.`;
               onChange={handleInputChange}
               placeholder="e.g. 9876543210"
               className={`w-full px-4 py-3 bg-gray-50 border rounded-xl text-sm font-sans placeholder-gray-400 focus:outline-none focus:ring-2 focus:bg-white transition-all ${
-                errors.mobile ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#0057D9]'
+                errors.mobile ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#4F46E5]'
               }`}
             />
             {errors.mobile && <p className="text-red-500 text-xs mt-1.5 font-sans font-medium">{errors.mobile}</p>}
@@ -194,9 +194,9 @@ Please confirm availability.`;
               name="shopName"
               value={formData.shopName}
               onChange={handleInputChange}
-              placeholder="e.g. Asian Electronics & Electricals"
+              placeholder="e.g. Mahabir Retail Traders"
               className={`w-full px-4 py-3 bg-gray-50 border rounded-xl text-sm font-sans placeholder-gray-400 focus:outline-none focus:ring-2 focus:bg-white transition-all ${
-                errors.shopName ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#0057D9]'
+                errors.shopName ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#4F46E5]'
               }`}
             />
             {errors.shopName && <p className="text-red-500 text-xs mt-1.5 font-sans font-medium">{errors.shopName}</p>}
@@ -213,9 +213,9 @@ Please confirm availability.`;
               rows={3}
               value={formData.address}
               onChange={handleInputChange}
-              placeholder="Specify Shop/Building No, Ward, Street Name, Landmark, City, State & Pincode"
+              placeholder="Specify Office/Shop/Building No, Ward, Street Name, Landmark, City, State & Pincode"
               className={`w-full px-4 py-3 bg-gray-50 border rounded-xl text-sm font-sans placeholder-gray-400 focus:outline-none focus:ring-2 focus:bg-white transition-all resize-none ${
-                errors.address ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#0057D9]'
+                errors.address ? 'border-red-500 focus:ring-red-500' : 'border-[#E5E7EB] focus:ring-[#4F46E5]'
               }`}
             />
             {errors.address && <p className="text-red-500 text-xs mt-1.5 font-sans font-medium">{errors.address}</p>}
@@ -223,17 +223,17 @@ Please confirm availability.`;
 
           {/* Secure Checkout Visual sticker */}
           <div className="p-3.5 bg-gray-50 border border-[#E5E7EB] rounded-xl flex items-center justify-between text-xs text-gray-500 mt-2">
-            <span className="font-medium font-sans">Payment Terms:</span>
-            <span className="font-bold text-[#16A34A] uppercase font-sans">No advance, pay on confirmation</span>
+            <span className="font-medium font-sans">Deployment Support:</span>
+            <span className="font-bold text-[#16A34A] uppercase font-sans">Free installation & testing period</span>
           </div>
 
           <div className="pt-4">
             <button
               type="submit"
-              className="w-full flex items-center justify-center space-x-2 bg-[#16A34A] text-white hover:bg-green-700 h-12 rounded-xl text-sm font-bold transition-all focus:outline-none focus:ring-4 focus:ring-green-300/30"
+              className="w-full flex items-center justify-center space-x-2 bg-[#4F46E5] text-white hover:bg-[#3B32CC] h-12 rounded-xl text-sm font-bold transition-all focus:outline-none focus:ring-4 focus:ring-indigo-300/30"
             >
               <MessageSquare className="w-4 h-4 text-white fill-white" />
-              <span>Send Wholesale Order to WhatsApp</span>
+              <span>Send Requirements to WhatsApp</span>
             </button>
           </div>
         </form>

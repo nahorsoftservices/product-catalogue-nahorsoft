@@ -1,6 +1,6 @@
 {
-  "name": "Mahabir Quantum India",
-  "description": "Wholesale electronics catalog and ordering platform via WhatsApp for Mahabir Quantum India.",
+  "name": "Nahorsoft Software Services",
+  "description": "Customized apps and software catalog for retailers and wholesalers.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

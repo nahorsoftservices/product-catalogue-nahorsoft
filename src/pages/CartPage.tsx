@@ -20,15 +20,15 @@ export const CartPage: React.FC = () => {
     return (
       <div id="cart-empty-state" className="container mx-auto px-4 py-16 text-center max-w-md">
         <div className="p-4 bg-gray-50 rounded-full inline-block mb-4">
-          <ShoppingCart className="w-12 h-12 text-[#0057D9]" />
+          <ShoppingCart className="w-12 h-12 text-[#4F46E5]" />
         </div>
         <h3 className="text-xl font-bold text-[#0F172A] font-sans">Your Cart is Empty</h3>
         <p className="text-gray-500 text-xs mt-1 mb-6 font-sans">
-          You haven't selected any items. Browse our wholesale items catalog to add products.
+          You haven't selected any solutions. Browse our software products catalog to add items.
         </p>
         <button
           onClick={() => navigate('/')}
-          className="inline-flex items-center space-x-2 bg-[#0057D9] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#004dc2]"
+          className="inline-flex items-center space-x-2 bg-[#4F46E5] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#3B32CC]"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Browse Products</span>
@@ -42,14 +42,14 @@ export const CartPage: React.FC = () => {
       {/* Return link */}
       <button
         onClick={() => navigate('/')}
-        className="inline-flex items-center space-x-1.5 text-gray-400 hover:text-[#0057D9] mb-6 text-sm font-medium transition-colors font-sans"
+        className="inline-flex items-center space-x-1.5 text-gray-400 hover:text-[#4F46E5] mb-6 text-sm font-medium transition-colors font-sans"
       >
         <ArrowLeft className="w-4 h-4" />
         <span>Continue Browsing Products</span>
       </button>
 
       <h1 className="text-xl sm:text-2xl font-bold text-[#0F172A] tracking-tight mb-6 font-sans">
-        Wholesale Shopping Basket
+        Software Requirements Basket
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -80,7 +80,7 @@ export const CartPage: React.FC = () => {
                 <div className="ml-3 sm:ml-4 flex-1">
                   <h3 
                     onClick={() => navigate(`/product/${prod.id}`)}
-                    className="text-xs sm:text-sm font-bold text-[#0F172A] hover:text-[#0057D9] cursor-pointer line-clamp-1 font-sans"
+                    className="text-xs sm:text-sm font-bold text-[#0F172A] hover:text-[#4F46E5] cursor-pointer line-clamp-1 font-sans"
                   >
                     {prod.name}
                   </h3>
@@ -88,7 +88,7 @@ export const CartPage: React.FC = () => {
                   {/* Item Rates */}
                   <div className="flex items-baseline space-x-2 mt-0.5">
                     <span className="text-xs font-semibold text-gray-500 font-sans">
-                      {prod.rateDisplay} / Pc
+                      {prod.rateDisplay} / License
                     </span>
                   </div>
 
@@ -132,43 +132,43 @@ export const CartPage: React.FC = () => {
         <div className="lg:col-span-4">
           <div className="bg-white border border-[#E5E7EB] rounded-2xl p-5 shadow-sm sticky top-24">
             <h3 className="text-sm uppercase tracking-wider font-extrabold text-[#0F172A] mb-4 font-sans">
-              Wholesale Order Summary
+              Requirement Cart Summary
             </h3>
 
             <div className="space-y-4 border-b border-gray-100 pb-4 mb-4">
               <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-500 font-sans">Total Line Models:</span>
+                <span className="text-gray-500 font-sans">Total Selected Apps:</span>
                 <span className="font-semibold text-[#0F172A] font-sans">{cart.length} Models</span>
               </div>
               <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-500 font-sans">Total Aggregate Qty:</span>
-                <span className="font-semibold text-[#0F172A] font-sans">{totalItemsCount} Pcs</span>
+                <span className="text-gray-500 font-sans">Total Requested Units:</span>
+                <span className="font-semibold text-[#0F172A] font-sans">{totalItemsCount} Units</span>
               </div>
               
               {/* Conditional MOQ values information */}
               {maxMOQ > 0 && (
                 <div className="flex justify-between items-center text-sm">
-                  <span className="text-gray-500 font-sans">Target wholesale MOQ:</span>
-                  <span className="font-bold text-[#F59E0B] font-sans">{maxMOQ.toLocaleString()}</span>
+                  <span className="text-gray-500 font-sans">Target solution MOQ:</span>
+                  <span className="font-bold text-[#4F46E5] font-sans">{maxMOQ.toLocaleString()}</span>
                 </div>
               )}
             </div>
 
             {/* Total rate sum */}
             <div className="flex justify-between items-baseline mb-6">
-              <span className="text-[#0F172A] font-bold text-sm font-sans">Total order rate:</span>
+              <span className="text-[#0F172A] font-bold text-sm font-sans">Total estimated rate:</span>
               <div className="text-right">
-                <span className="text-2xl font-black text-[#0057D9]">₹{totalAmount.toLocaleString()}</span>
-                <p className="text-[9px] text-gray-400 font-sans uppercase mt-0.5 mt-0.5">EST. Wholesale rate</p>
+                <span className="text-2xl font-black text-[#4F46E5]">₹{totalAmount.toLocaleString()}</span>
+                <p className="text-[9px] text-gray-400 font-sans uppercase mt-0.5">EST. SOLUTION RATE</p>
               </div>
             </div>
 
             {/* Warn if below target validation bounds */}
             {isBelowMOQ && (
-              <div className="mb-4 p-3 bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#D97706] rounded-xl flex items-start space-x-2 text-[11px] leading-relaxed">
+              <div className="mb-4 p-3 bg-[#4F46E5]/10 border border-[#4F46E5]/20 text-[#4F46E5] rounded-xl flex items-start space-x-2 text-[11px] leading-relaxed">
                 <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Note:</strong> Wholesale target value is below the vendor's minimum product MOQ specification ({maxMOQ.toLocaleString()}). You can still proceed to discuss with the supplier on WhatsApp.
+                  <strong>Note:</strong> Selected value is below the vendor's minimum product MOQ specification ({maxMOQ.toLocaleString()}). You can still proceed to discuss with Nahorsoft on WhatsApp.
                 </span>
               </div>
             )}
@@ -176,9 +176,9 @@ export const CartPage: React.FC = () => {
             {/* Check out form buttons */}
             <button
               onClick={() => navigate('/checkout')}
-              className="w-full flex items-center justify-center space-x-2 bg-[#16A34A] text-white hover:bg-green-700 h-12 rounded-xl text-sm font-bold transition-all shadow-sm focus:outline-none"
+              className="w-full flex items-center justify-center space-x-2 bg-[#4F46E5] text-white hover:bg-[#3B32CC] h-12 rounded-xl text-sm font-bold transition-all shadow-sm focus:outline-none"
             >
-              <span>Order Now</span>
+              <span>Submit Core Requirements</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

@@ -31,7 +31,7 @@ export const FloatingCart: React.FC = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => navigate('/cart')}
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center space-x-2 bg-[#0057D9] text-white px-5 py-3.5 rounded-full shadow-lg shadow-[#0057D9]/20 hover:bg-[#004dc2] transition-colors focus:outline-none focus:ring-4 focus:ring-[#0057D9]/30"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center space-x-2 bg-[#4F46E5] text-white px-5 py-3.5 rounded-full shadow-lg shadow-[#4F46E5]/20 hover:bg-[#3B32CC] transition-colors focus:outline-none focus:ring-4 focus:ring-[#4F46E5]/30"
         aria-label="View Cart"
       >
         <ShoppingCart className="w-5 height-5" />

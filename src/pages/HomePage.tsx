@@ -34,9 +34,9 @@ export const HomePage: React.FC = () => {
   if (loading) {
     return (
       <div id="home-loading" className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-        <Loader2 className="w-12 h-12 text-[#0057D9] animate-spin mb-4" />
-        <p className="text-[#0F172A] font-medium font-sans">Loading wholesales catalog...</p>
-        <p className="text-gray-400 text-xs mt-1">Fetching live rates from inventory sheet</p>
+        <Loader2 className="w-12 h-12 text-[#4F46E5] animate-spin mb-4" />
+        <p className="text-[#0F172A] font-medium font-sans">Loading solutions catalog...</p>
+        <p className="text-gray-400 text-xs mt-1">Fetching live rates from inventory systems</p>
       </div>
     );
   }
@@ -52,7 +52,7 @@ export const HomePage: React.FC = () => {
         </p>
         <button
           onClick={refreshCatalog}
-          className="flex items-center space-x-2 bg-[#0057D9] text-white px-5 py-2.5 rounded-lg hover:bg-[#004dc2] transition-colors focus:ring-4 focus:ring-[#0057D9]/20"
+          className="flex items-center space-x-2 bg-[#4F46E5] text-white px-5 py-2.5 rounded-lg hover:bg-[#3B32CC] transition-colors focus:ring-4 focus:ring-[#4F46E5]/20"
         >
           <RotateCcw className="w-4 h-4" />
           <span>Reload Stock List</span>
@@ -62,27 +62,60 @@ export const HomePage: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6 max-w-7xl">
+    <div className="container mx-auto px-4 py-8 max-w-7xl">
+      {/* Introduction Hero Section for Nahorsoft Software Services */}
+      <div className="mb-8 p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-[#1E1B4B] to-slate-900 text-white rounded-3xl shadow-xl relative overflow-hidden border border-slate-800">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4F46E5]/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl -ml-20 -mb-20"></div>
+        
+        <div className="relative z-10 max-w-3xl">
+          <div className="inline-flex items-center space-x-2 bg-[#4F46E5]/20 text-[#818CF8] px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-4 border border-[#4F46E5]/30">
+            <span>✨ Tailored IT Solutions</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white mb-3 font-display">
+            Custom Software built for Your Business Growth
+          </h2>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-sans">
+            We provide customised apps, automated inventory sheets, secure ordering channels, and bespoke software systems to <strong className="text-white">retailers and wholesalers</strong> to streamline, digitize, and scale operations.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 mt-6 pt-6 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
+            <div className="flex items-center space-x-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Retail & POS Systems</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="w-2 h-2 rounded-full bg-[#818CF8]"></span>
+              <span>Bespoke Wholesale Apps</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Automated Inventory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* PWA Banner Installation Notification Prompts */}
       {isPwaInstallable && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           id="pwa-install-banner"
-          className="mb-6 p-4 bg-[#0057D9] text-white rounded-xl shadow-md flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
+          className="mb-8 p-4 bg-[#4F46E5] text-white rounded-2xl shadow-md flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0 border border-[#4F46E5]/40"
         >
           <div className="flex items-center space-x-3 text-center sm:text-left">
-            <div className="p-2 bg-white/10 rounded-lg">
+            <div className="p-2 bg-white/15 rounded-xl">
               <ShoppingBag className="w-5 h-5 text-white" />
             </div>
             <div>
-              <p className="font-semibold text-sm">Install Mahabir Quantum India App</p>
-              <p className="text-xs text-white/80">Browse products and place bulk orders with one tap from your home screen.</p>
+              <p className="font-semibold text-sm">Install Nahorsoft Software App</p>
+              <p className="text-xs text-white/80">Browse customized products and place bulk orders with one tap from your home screen.</p>
             </div>
           </div>
           <button
             onClick={triggerPWAInstall}
-            className="w-full sm:w-auto bg-white text-[#0057D9] px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-gray-50 transition-colors"
+            className="w-full sm:w-auto bg-white text-[#4F46E5] px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-slate-50 transition-all font-sans active:translate-y-px"
           >
             Add to Home Screen
           </button>
@@ -98,10 +131,10 @@ export const HomePage: React.FC = () => {
             </span>
             <input
               type="text"
-              placeholder="Search products by model, brand, or features..."
+              placeholder="Search software products, models, or core specifications..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-[#E5E7EB] rounded-xl text-[#0F172A] placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057D9] focus:bg-white transition-all font-sans"
+              className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-[#E5E7EB] rounded-xl text-[#0F172A] placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:bg-white transition-all font-sans"
             />
           </div>
           
@@ -109,9 +142,9 @@ export const HomePage: React.FC = () => {
             <div className="text-sm text-gray-500 font-sans">
               Showing <span className="text-[#0F172A] font-semibold">{filteredProducts.length}</span> of <span className="text-[#0F172A] font-semibold">{products.length}</span> stock items
             </div>
-            <div className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 bg-green-50 text-[#16A34A] rounded-lg text-xs font-medium">
+            <div className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 bg-indigo-50 text-[#4F46E5] rounded-lg text-xs font-bold">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Verified Wholesale</span>
+              <span>Verified Systems</span>
             </div>
           </div>
         </div>
@@ -178,25 +211,25 @@ export const HomePage: React.FC = () => {
                   <div>
                     <h4 
                       onClick={() => navigate(`/product/${product.id}`)}
-                      className="text-sm sm:text-base font-semibold text-[#0F172A] tracking-tight hover:text-[#0057D9] cursor-pointer line-clamp-2 min-h-[2.5rem] font-sans"
+                      className="text-sm sm:text-base font-semibold text-[#0F172A] tracking-tight hover:text-[#4F46E5] cursor-pointer line-clamp-2 min-h-[2.5rem] font-sans"
                     >
                       {product.name}
                     </h4>
 
                     {/* Pricing Ratios */}
                     <div className="mt-2 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 sm:gap-2">
-                      <div className="text-[#0F172A] font-bold text-base sm:text-lg">
+                       <div className="text-[#0F172A] font-extrabold text-base sm:text-lg">
                         {product.rateDisplay}
                       </div>
                       <div className="text-[11px] text-gray-400 font-mono">
-                        Per Piece Rate
+                        Per License Rate
                       </div>
                     </div>
 
                     {/* Wholesale Minimum Order Sticker */}
                     <div className="mt-2.5 pt-2 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-500">
-                      <span>Min Order Val:</span>
-                      <span className="font-bold text-[#F59E0B] font-sans">
+                      <span>Target MOQ:</span>
+                      <span className="font-bold text-[#4F46E5] font-sans">
                         {product.minimumOrderValueDisplay}
                       </span>
                     </div>
@@ -217,7 +250,7 @@ export const HomePage: React.FC = () => {
                         </span>
                         <button
                           onClick={() => addToCart(product, 1)}
-                          className="flex-1 bg-[#0057D9]/10 hover:bg-[#0057D9]/20 text-[#0057D9] font-bold py-2 rounded-lg text-xs transition-colors flex justify-center items-center"
+                          className="flex-1 bg-[#4F46E5]/10 hover:bg-[#4F46E5]/20 text-[#4F46E5] font-bold py-2 rounded-lg text-xs transition-colors flex justify-center items-center"
                         >
                           +
                         </button>
@@ -225,7 +258,7 @@ export const HomePage: React.FC = () => {
                     ) : (
                       <button
                         onClick={() => addToCart(product, 1)}
-                        className="w-full flex items-center justify-center space-x-1.5 bg-[#0057D9] text-white hover:bg-[#004dc2] py-2 rounded-lg text-xs font-semibold transition-all shadow-sm"
+                        className="w-full flex items-center justify-center space-x-1.5 bg-[#4F46E5] text-white hover:bg-[#3B32CC] py-2 rounded-lg text-xs font-semibold transition-all shadow-sm"
                       >
                         <Plus className="w-3.5 h-3.5" />
                         <span>Add To Cart</span>

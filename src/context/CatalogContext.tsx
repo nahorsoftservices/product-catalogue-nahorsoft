@@ -109,7 +109,7 @@ export const CatalogProvider: React.FC<{ children: ReactNode }> = ({ children })
     window.addEventListener('appinstalled', () => {
       setIsPwaInstallable(false);
       setPwaInstallPrompt(null);
-      console.log('[PWA] Mahabir Quantum India was installed.');
+      console.log('[PWA] Nahorsoft Software Services was installed.');
     });
 
     return () => {
@@ -193,7 +193,7 @@ export const CatalogProvider: React.FC<{ children: ReactNode }> = ({ children })
       setProducts(formattedProducts);
     } catch (err: any) {
       console.error('Catalog Fetch Error:', err);
-      setError(err?.message || 'Error occurred while loading Mahabir Quantum India wholesale products.');
+      setError(err?.message || 'Error occurred while loading Nahorsoft Software Services product catalog.');
     } finally {
       setLoading(false);
     }

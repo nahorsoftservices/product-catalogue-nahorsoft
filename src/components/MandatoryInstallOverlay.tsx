@@ -45,25 +45,25 @@ export const MandatoryInstallOverlay: React.FC = () => {
     <div className="fixed inset-0 z-[9999] bg-[#0F172A] text-white flex items-center justify-center p-4 overflow-y-auto">
       <div className="max-w-md w-full bg-[#1E293B] border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-[#0057D9]/20 text-[#0057D9] rounded-2xl flex items-center justify-center mx-auto mb-4 border border-[#0057D9]/35">
-            <Download className="w-8 h-8 text-[#0057D9]" />
+          <div className="w-16 h-16 bg-[#4F46E5]/20 text-[#4F46E5] rounded-2xl flex items-center justify-center mx-auto mb-4 border border-[#4F46E5]/35">
+            <Download className="w-8 h-8 text-[#4F46E5]" />
           </div>
           <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase">
-            Mahabir Quantum India
+            Nahorsoft Software
           </h2>
-          <p className="text-xs text-[#0057D9] tracking-widest font-bold uppercase mt-1">
+          <p className="text-xs text-[#4F46E5] tracking-widest font-bold uppercase mt-1">
             Official Installation Required
           </p>
         </div>
 
         <div className="space-y-4 mb-6 text-sm text-slate-300">
           <p className="text-xs text-center border-b border-slate-700/60 pb-3 leading-relaxed text-slate-400">
-            To view full dealer prices, access live inventory models, and send purchase orders, please download and install our Chrome Web Shortcut application.
+            To view our premium customized software prototypes, access live wholesale software options, and submit customized app requirements, please download and install our Web app shortcut.
           </p>
 
           <div className="space-y-3">
             <div className="flex items-start space-x-3 bg-slate-800/50 p-3 rounded-xl border border-slate-700/40">
-              <span className="bg-[#0057D9] text-white font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">1</span>
+              <span className="bg-[#4F46E5] text-white font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">1</span>
               <div>
                 <p className="font-semibold text-xs text-white">Click Install App</p>
                 <p className="text-[11px] text-slate-400">Triggers Google Chrome's fast native desktop or mobile PWA downloader.</p>
@@ -71,7 +71,7 @@ export const MandatoryInstallOverlay: React.FC = () => {
             </div>
 
             <div className="flex items-start space-x-3 bg-slate-800/50 p-3 rounded-xl border border-slate-700/40">
-              <span className="bg-[#0057D9] text-white font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">2</span>
+              <span className="bg-[#4F46E5] text-white font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">2</span>
               <div>
                 <p className="font-semibold text-xs text-white">Add to Home Screen</p>
                 <p className="text-[11px] text-slate-400">Once installed, open it directly from your list of device apps.</p>
@@ -79,10 +79,10 @@ export const MandatoryInstallOverlay: React.FC = () => {
             </div>
 
             <div className="flex items-start space-x-3 bg-slate-800/50 p-3 rounded-xl border border-slate-700/40">
-              <span className="bg-[#0057D9] text-white font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">3</span>
+              <span className="bg-[#4F46E5] text-white font-bold text-xs rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">3</span>
               <div>
                 <p className="font-semibold text-xs text-white">Instant Sync & Offline Use</p>
-                <p className="text-[11px] text-slate-400">Access wholesale item specifications even with unstable warehouse internet.</p>
+                <p className="text-[11px] text-slate-400">Access customized software catalogs even with unstable or disconnected internet.</p>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ export const MandatoryInstallOverlay: React.FC = () => {
           {isPwaInstallable ? (
             <button
               onClick={triggerPWAInstall}
-              className="w-full flex items-center justify-center space-x-2 bg-[#0057D9] text-white hover:bg-[#004dc2] h-12 rounded-xl text-sm font-bold transition-all shadow-lg active:scale-[0.99]"
+              className="w-full flex items-center justify-center space-x-2 bg-[#4F46E5] text-white hover:bg-[#3B32CC] h-12 rounded-xl text-sm font-bold transition-all shadow-lg active:scale-[0.99]"
             >
               <Download className="w-4 h-4" />
               <span>Install Official App Now</span>
@@ -119,7 +119,7 @@ export const MandatoryInstallOverlay: React.FC = () => {
             {isInIframe ? (
               <button
                 onClick={() => setShowWebBypass(true)}
-                className="text-[11px] text-[#0057D9] hover:underline uppercase tracking-wider font-semibold focus:outline-none"
+                className="text-[11px] text-[#4F46E5] hover:underline uppercase tracking-wider font-semibold focus:outline-none"
               >
                 [Iframe Sandbox Bypass for Developer Preview]
               </button>
@@ -128,7 +128,7 @@ export const MandatoryInstallOverlay: React.FC = () => {
                 onClick={() => setShowWebBypass(true)}
                 className="text-[11px] text-slate-500 hover:text-slate-300 font-medium tracking-wide focus:outline-none"
               >
-                Dismiss & Browse Web Version (No Rates Offline)
+                Dismiss & Browse Web Version
               </button>
             )}
           </div>
